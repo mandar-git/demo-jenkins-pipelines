@@ -1,5 +1,5 @@
 node{
-// demo2
+// demo3
    stage('SCM Checkout'){
      git 'https://github.com/mandar-git/demo-jenkins-pipelines'
    }
@@ -7,4 +7,7 @@ node{
      def mvnHome = tool name: 'maven-3.8.5', type: 'maven'
       sh "${mvnHome}/bin/mvn package"
    }
+   stage('Cleanup'){
+      cleanWs()
+ }
 }
