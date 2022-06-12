@@ -9,8 +9,8 @@ import java.util.Properties;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
-public class CalculatorTest extends TestCase {
-	Calculator cal = new Calculator();
+public class CalcTest extends TestCase {
+	Calc cal = new Calc();
 
 	public void testAdd() {
 		Properties prop = new Properties();
