@@ -3,7 +3,7 @@ import java.util.List;
 /*
  * 
  */
-public class Calculator {
+public class Calc {
 	/*
 	 * @param i
 	 * @param j

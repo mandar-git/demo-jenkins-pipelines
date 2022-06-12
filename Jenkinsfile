@@ -1,5 +1,6 @@
 node{
 // demo2
+
    stage('SCM Checkout'){
      git 'https://github.com/mandar-git/demo-jenkins-pipelines'
    }
