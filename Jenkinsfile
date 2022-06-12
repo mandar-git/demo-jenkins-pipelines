@@ -4,5 +4,5 @@ node{
      git 'https://github.com/mandar-git/demo-jenkins-pipelines'
    }
    stage('Compile-Package'){
-     sh 'mvn package 
+     sh 'mvn package'
    }
