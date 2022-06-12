@@ -9,7 +9,7 @@ import java.util.Properties;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
-public class CalculatorTest extends TestCase {
+public class CalcTest extends TestCase {
 	Calc cal = new Calc();
 
 	public void testAdd() {
