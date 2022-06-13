@@ -4,7 +4,7 @@ pipeline{
    environment{
       mvnHome = tool name: 'maven-3.8.5', type: 'maven'
       dockerHome = tool 'myDocker'
-      env.PATH = "${dockerHome}/bin:${env.PATH}"
+      PATH = "${dockerHome}/bin:${PATH}"
    }
    stages {
       stage("Git Checkout"){
