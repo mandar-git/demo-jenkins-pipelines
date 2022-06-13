@@ -5,6 +5,8 @@ pipeline{
       mvnHome = tool name: 'maven-3.8.5', type: 'maven'
       dockerHome = tool 'myDocker'
       PATH = "${dockerHome}/bin:${PATH}"
+      workspace = WORKSPACE
+      wspace=pwd()
    }
    stages {
       stage("Git Checkout"){
@@ -15,10 +17,12 @@ pipeline{
       stage('Maven Build'){
          steps{
             sh "${mvnHome}/bin/mvn clean package"
+            sh 'echo ${pwd}'
          }
       }
       stage('Build Docker Image'){
          steps{
+            sh 'echo ${workspace}'
             sh 'docker build -f /var/lib/jenkins/workspace/decl-pipeline-3/pipeline/Dockerfile -t mandar1983/my-py-webapp:latest /var/lib/jenkins/workspace/decl-pipeline-3/pipeline'
          }
       }
