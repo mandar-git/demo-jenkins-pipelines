@@ -5,8 +5,7 @@ pipeline{
       mvnHome = tool name: 'maven-3.8.5', type: 'maven'
       dockerHome = tool 'myDocker'
       PATH = "${dockerHome}/bin:${PATH}"
-      workspace = WORKSPACE
-      wspace=pwd()
+      workspace=pwd()
    }
    stages {
       stage("Git Checkout"){
@@ -17,7 +16,7 @@ pipeline{
       stage('Maven Build'){
          steps{
             sh "${mvnHome}/bin/mvn clean package"
-            sh 'echo ${pwd}'
+            sh 'echo ${workspace}'
          }
       }
       stage('Build Docker Image'){
