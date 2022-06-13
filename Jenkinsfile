@@ -18,6 +18,7 @@ pipeline {
       docker {
           image 'python:3.8-slim'
         }
+      }
       steps {
         sh 'docker build -t mandar1983/my-pyweb-app:latest .'
       }
