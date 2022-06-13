@@ -21,7 +21,7 @@ pipeline{
       }
       stage('Build Docker Image'){
          steps{
-            sh 'echo ${workspace}'
+            sh 'echo ${pwd()}'
             sh 'docker build -f /var/lib/jenkins/workspace/decl-pipeline-3/pipeline/Dockerfile -t mandar1983/my-py-webapp:latest /var/lib/jenkins/workspace/decl-pipeline-3/pipeline'
          }
       }
