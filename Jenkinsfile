@@ -1,9 +1,9 @@
 pipeline{
    agent any
    stages {
-      stage("Welcome"){
+      stage("Git Checkout"){
          steps{
-            echo "My first Declarative Jenkins Pipeline"
+            git branch: 'demo-decl-2', credentialsId: 'mandar_git', url: 'https://github.com/mandar-git/demo-jenkins-pipelines.git'
          }
       }
    }
