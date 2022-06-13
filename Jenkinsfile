@@ -15,5 +15,11 @@ pipeline{
             sh "${mvnHome}/bin/mvn clean package"
          }
       }
+      
+       stage('Clean Workspace'){
+         steps{
+            cleanWs()
+         }
+      }
    }
 }
