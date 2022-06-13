@@ -15,7 +15,11 @@ pipeline{
             sh "${mvnHome}/bin/mvn clean package"
          }
       }
-      
+      stage('Build Docker Image'){
+         steps{
+            sh 'docker build -t . mandar1983/my-py-webapp:latest
+         }
+      }
        stage('Clean Workspace'){
          steps{
             cleanWs()
