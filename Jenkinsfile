@@ -7,6 +7,10 @@ node{
      def mvnHome = tool name: 'maven-3.8.5', type: 'maven'
       sh "${mvnHome}/bin/mvn package"
    }
+   
+   stage('Email Notification'){
+      mail bcc: '', body: 'Hello from Jenkins', cc: '', from: '', replyTo: '', subject: 'Test email from Jenkins Pipeline', to: 'dindorkar.mandar@gmail.com'
+   }
    stage('Cleanup'){
       cleanWs()
  }
