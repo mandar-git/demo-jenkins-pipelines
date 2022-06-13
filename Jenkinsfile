@@ -19,6 +19,5 @@ pipeline {
         sh 'docker build -t mandar1983/my-pyweb-app:latest .'
       }
     }
-    }
   }
 }
