@@ -19,7 +19,7 @@ pipeline{
       }
       stage('Build Docker Image'){
          steps{
-            sh 'docker build -t mandar1983/my-py-webapp:latest ./pipeline'
+            sh 'docker build -f -f /var/lib/jenkins/workspace/decl-pipeline-3/pipeline/Dockerfile-t mandar1983/my-py-webapp:latest ./var/lib/jenkins/workspace/decl-pipeline-3/pipeline'
          }
       }
        stage('Clean Workspace'){
