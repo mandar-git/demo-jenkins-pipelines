@@ -1,7 +1,12 @@
 #!groovy
 
 pipeline {
-  agent none
+  agent any  
+   environment{
+      mvnHome = tool name: 'maven-3.8.5', type: 'maven'
+      dockerHome = tool 'myDocker'
+      PATH = "${dockerHome}/bin:${PATH}"
+   }
   stages {
     stage('Maven Install') {
       agent {
