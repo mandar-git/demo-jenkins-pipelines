@@ -8,6 +8,11 @@ pipeline {
       PATH = "${dockerHome}/bin:${PATH}"
    }
   stages {
+    stage('Add Jenkins to group Docker'){
+      steps{
+        sh 'usermod -a -G docker jenkins'
+      }
+    }
     stage('Maven Install') {
       agent {
         docker {
