@@ -4,3 +4,12 @@
      echo 'Hello world'
      greet 'Dave'
  }
+
+stage('Hello') {
+     hello()
+ }
+
+
+stage('Greet') {
+     greet 'Jenkins User'
+ }
