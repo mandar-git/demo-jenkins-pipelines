@@ -1,3 +1,16 @@
- @Library('pipeline-library-demo')_
 
-jenkinsForJava 'https://github.com/mandar-git/demo-jenkins-pipelines.git'
+node {
+    stage('SCM') {
+	echo 'Gathering code from version control'
+    }
+    stage('Build') {
+        echo 'Building....'
+         rlsnotes()
+    }
+    stage('Test') {
+        echo 'Testing....'
+    }
+    stage('Deploy') {
+        echo 'Deploying....'
+    }
+}
