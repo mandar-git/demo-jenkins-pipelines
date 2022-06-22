@@ -1,4 +1,4 @@
-
+ @Library('pipeline-library-demo')_
 node {
     stage('SCM') {
 	echo 'Gathering code from version control'
