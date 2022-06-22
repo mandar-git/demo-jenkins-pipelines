@@ -5,7 +5,8 @@ node {
     }
     stage('Build') {
         echo 'Building....'
-         rlsnotes()
+         //rlsnotes()
+	   releasenotes()
     }
     stage('Test') {
         echo 'Testing....'
